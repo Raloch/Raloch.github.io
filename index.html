@@ -147,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 672 个字)
+                    9 分钟 读完 (大约 1332 个字)
                 </span>
                 
                 
@@ -160,26 +160,51 @@
             
         </h1>
         <div class="content">
-            <hr>
-<h4 id="1-React-Native简介"><a href="#1-React-Native简介" class="headerlink" title="1.React Native简介"></a>1.React Native简介</h4><p>&emsp;&emsp;<a href="https://reactnative.cn/" target="_blank" rel="noopener">React Native</a>（简称RN）是Facebook于2015年4月开源的跨平台移动应用开发框架，是Facebook早先开源的JS框架React在原生移动应用平台的衍生产物，支持安卓和IOS两大平台。RN使用Javascript语言，类似于HTML的JSX，以及CSS来开发移动应用，因此熟悉Web前端开发的技术人员只需要很少的学习就可以进入移动应用开发领域。</p>
-<h4 id="2-React-Native特性"><a href="#2-React-Native特性" class="headerlink" title="2.React Native特性"></a>2.React Native特性</h4><p>&emsp;&emsp;React Native使你能够在Javascript和React的基础上获得完全一致的开发体验，创建出世界一流的原生App。<br>&emsp;&emsp;React Native着力于提高多平台的开发效率，只需要一次性的学习，就可以编写兼容任何平台的App。</p>
-<p>&emsp;1）原生的IOS组件</p>
-<p>&emsp;&emsp;React Native主张“Learn once, write everywhere”而非其他跨平台工具一直宣扬的“Write once, run everywhere”。通过React Native，开发者可以使用UITabBar、UINavigationController等标准的IOS平台组件，让应用界面在其他平台上亦能保持始终如一的外观、风格。</p>
-<p>&emsp;2）异步执行</p>
-<p>&emsp;&emsp;JavaScript应用代码和原生平台之间所有的操作都采用异步执行模式，原生模块使用额外线程，开发者可以解码主线程图像、后台保存至磁盘、无须顾忌UI等诸多因素直接度量文本设计布局。</p>
-<p>&emsp;3）触摸处理</p>
-<p>&emsp;&emsp;React Native引入了一个类似于IOS上Responder Chain响应链事件处理机制的响应体系，并基于此为开发者提供了诸如TouchableHighlight等更高级的组件。</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> &#123;TouchableOpacity, Text&#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native'</span>;</span><br><span class="line"></span><br><span class="line">&lt;TouchableOpacity activeOpacity=&#123;<span class="hljs-number">0.8</span>&#125; onPress=&#123;() =&gt; &#123;&#125;&#125;&gt;</span><br><span class="line">  &lt;Text&gt;提交&lt;<span class="hljs-regexp">/Text&gt;</span></span><br><span class="line"><span class="hljs-regexp">&lt;/</span>TouchableOpacity&gt;</span><br></pre></td></tr></table></figure>
+            <h3 id="传统的移动端开发模式"><a href="#传统的移动端开发模式" class="headerlink" title="传统的移动端开发模式"></a>传统的移动端开发模式</h3><hr>
+<p>由于 AppStore 审核周期的限制，如何动态的更改 app 成为了永恒的话题。无论采用何种方式，我们的流程总是可以归结为以下三部曲：“从 Server 获取配置 –&gt; 解析 –&gt; 执行native代码”。</p>
+<p>很多时候，我们自觉或者不自觉的利用 JSON 文件实现动态配置的效果，它的核心流程是：</p>
+<p>1.通过 HTTP 请求获取 JSON 格式的配置文件。<br>2.配置文件中标记了每一个元素的属性，比如位置，颜色，图片 URL 等。<br>3.解析完 JSON 后，我们调用 Objective-C 的代码，完成 UI 控件的渲染。</p>
+<p>通过这种方法，我们实现了在后台配置 app 的展示样式。从本质上来说，移动端和服务端约定了一套协议，但是协议内容严重依赖于应用内要展示的内容，不利于拓展。也就是说，如果业务要求频繁的增加或修改页面，这套协议很难应付。</p>
+<p>最重要的是，JSON 只是一种数据交换的格式，说白了，我们就是在解析文本数据。这就意味着它只适合提供一些配置信息，而不方便提供逻辑信息。举个例子，我们从后台可以配置颜色，位置等信息，但如果想要控制 app 内的业务逻辑，就非常复杂了。</p>
+<p>记住，我们只是在解析字符串，它完全不具备运行和调试的能力。</p>
+<h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><hr>
+<p>前端三大框架体系之一：React</p>
+<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>传统的前端开发是这样的：</p>
+<ul>
+<li>用 HTML 创建 DOM，构建整个网页的布局、结构</li>
+<li>用 CSS 控制 DOM 的样式，比如字体、字号、颜色、居中等</li>
+<li>用 JavaScript 接受用户事件，动态的操控 DOM</li>
+</ul>
+<p>在这三者的配合下，几乎所有页面上的功能都能实现。但也有比较不爽地方，比如我想动态修改一个按钮的文字，我需要这样写：</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;button id=<span class="hljs-string">"btn"</span>&gt;hello&lt;<span class="hljs-regexp">/button&gt;</span></span><br><span class="line"><span class="hljs-regexp"></span></span><br><span class="line"><span class="hljs-regexp">let btn = document.querySelector('#btn');</span></span><br><span class="line"><span class="hljs-regexp">btn.onclick = function () &#123;</span></span><br><span class="line"><span class="hljs-regexp">  this.innerText = 'world';</span></span><br><span class="line"><span class="hljs-regexp">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="3-React-Native入手"><a href="#3-React-Native入手" class="headerlink" title="3.React Native入手"></a>3.React Native入手</h4><p>&emsp;&emsp;前面我们阐述的一些关于的React Native的一些基本信息，现在我们主要来介绍React Native的入门介绍，让大家感受下React Native对于开发App的便利。</p>
-<p>&emsp;1）构建React Native项目</p>
-<p>&emsp;&emsp;安装RN脚手架，并使用脚手架构建项目</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g react-native-cli</span><br><span class="line"></span><br><span class="line">react-native init AwesomeProject</span><br></pre></td></tr></table></figure>
+<p>可以看到，在 HTML 和 JavaScript 代码中，id 和 onclick 事件触发的函数必须完全对应，否则就无法正确的响应事件。如果想知道一个 HTML 标签会如何被响应，我们还得跑去 JavaScript 代码中查找，这种原始的配置方式让我觉得非常不爽。</p>
+<h4 id="初识-React"><a href="#初识-React" class="headerlink" title="初识 React"></a>初识 React</h4><p>随着 FaceBook 推出了 React 框架，这个问题得到了大幅度改善。我们可以把一组相关的 HTML 标签，也就是 app 内的 UI 控件，封装进一个组件(Component)中。</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>&#123;</span><br><span class="line">  handleClick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你好'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> (</span><br><span class="line">      &lt;div onClick=&#123; <span class="hljs-keyword">this</span>.handleClick &#125;&gt;hello world&lt;<span class="hljs-regexp">/div&gt;</span></span><br><span class="line"><span class="hljs-regexp">    )</span></span><br><span class="line"><span class="hljs-regexp">  &#125;</span></span><br><span class="line"><span class="hljs-regexp">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<p>&emsp;&emsp;生成的目录结构如下图：</p>
-<p>&emsp;&emsp;&emsp;<img src="https://github.com/Raloch/img-storage/blob/master/imgs/catalog.jpg?raw=true" alt="图一 目录结构"></p>
-<p>&emsp;2）Android Studio安装及使用</p>
-<p>&emsp;&emsp;接着我们需要安装<a href="https://developer.android.google.cn/studio/" target="_blank" rel="noopener">Android Studio</a>软件，使用它来编译构建项目，其次就是它的模拟器功能，当然我们也可以使用自己的android手机。</p>
+<p>JavaScript代码里出现了HTML语法，使用了React独有的JSX语法，它可以将JSX标签转换为原生JS并创建DOM。开发者全程不需要操作DOM。</p>
+<h4 id="理解-React"><a href="#理解-React" class="headerlink" title="理解 React"></a>理解 React</h4><p>React使用了新的概念：虚拟DOM。虚拟DOM是存在于内存中的JavaScript对象，它和DOM一一对应，并通过diff算法，最小化更新DOM，节省资源。</p>
+<p>tree diff：</p>
+<ol>
+<li>React通过updateDepth对Virtual DOM树进行层级控制。</li>
+<li>对树分层比较，两棵树 只对同一层次节点 进行比较。如果该节点不存在时，则该节点及其子节点会被完全删除，不会再进一步比较。</li>
+<li>只需遍历一次，就能完成整棵DOM树的比较。</li>
+</ol>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/Raloch/img-storage/blob/master/imgs/diff%E5%B1%82%E7%BA%A7%E6%8E%A7%E5%88%B6.jpg?raw=true" alt="层级控制"></p>
+<p>React只会考虑同层级的改变，当出现跨层级的节点操作时(位置变化)，React只有创建节点和删除节点的操作。</p>
+<hr>
+<p>component diff</p>
+<p>React对不同的组件间的比较，有三种策略</p>
+<ol>
+<li>同一类型的两个组件，按原策略（层级比较）继续比较Virtual DOM树即可。</li>
+<li>同一类型的两个组件，组件A变化为组件B时，可能Virtual DOM没有任何变化，如果知道这点（变换的过程中，Virtual DOM没有改变），可节省大量计算时间，所以 用户 可以通过 shouldComponentUpdate() 来判断是否需要 判断计算。</li>
+<li>不同类型的组件，将一个（将被改变的）组件判断为dirty component（脏组件），从而替换 整个组件的所有节点。</li>
+</ol>
+<p><strong>注意：如果组件D和组件G的结构相似，但是 React判断是 不同类型的组件，则不会比较其结构，而是删除 组件D及其子节点，创建组件G及其子节点。</strong></p>
+<hr>
+<p>element diff</p>
+<p>当节点处于同一层级时，diff提供三种节点操作：<strong>删除、插入、移动。</strong><br>对于同一层级的一组子节点，通过唯一id区分。</p>
+<h3 id="React-Native"><a href="#React-Native" class="headerlink" title="React Native"></a>React Native</h3><hr>
 
         </div>
         
