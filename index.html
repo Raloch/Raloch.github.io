@@ -141,6 +141,214 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-23T16:14:18.205Z">2019-12-24</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 44 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/12/24/transition/"></a>
+            
+        </h1>
+        <div class="content">
+            #transition-property-style {
+  width: 300px;
+  height: 200px;
+  background-color: teal;
+}
+#transition-property-style:hover {
+  background: blue;
+  transition-property: background;
+}
+/* duration */
+#transition-property-duration-style {
+  width: 300px;
+  height: 200px;
+  background-color: teal;
+}
+#transition-property-duration-style:hover {
+  background: blue;
+  transition-property: background;
+  transition-duration: 2s;
+}
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-23T15:28:06.175Z">2019-12-23</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 分钟 读完 (大约 1087 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/12/23/transition/">CSS3 transition</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="trandition-过渡"><a href="#trandition-过渡" class="headerlink" title="trandition 过渡"></a>trandition 过渡</h2><hr>
+<p>transition是一个简写属性，是一个transition-property （定义过渡的属性的名称）以及 transition-duration （定义过渡属性的所需动画的时间）和 transition-timing-function （描述中间值如何计算的） 以及 transition-delay （描述过渡效果开始作用之前需要等待的时间）。<br><br></p>
+<h3 id="transition-property"><a href="#transition-property" class="headerlink" title="transition-property"></a>transition-property</h3><hr>
+<p>transition-property 定义过渡属性的名称 即指定引用过渡属性的名称。</p>
+<div id="transition-property-style"></div>
+<br>
+
+<p>其实现css如下：</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="hljs-string">"transition-property-style"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">  #transition-property-style div &#123;</span><br><span class="line">    width: <span class="hljs-number">300</span>px;</span><br><span class="line">    height: <span class="hljs-number">200</span>px;</span><br><span class="line">    background-color: teal;</span><br><span class="line">  &#125;</span><br><span class="line">  #transition-property-style:hover &#123;</span><br><span class="line">    background: blue;</span><br><span class="line">    transition-property: background;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="hljs-regexp">/style&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="transition-duration"><a href="#transition-duration" class="headerlink" title="transition-duration"></a>transition-duration</h3><hr>
+<p>transition-duration这是一个过渡时间的设置。 设置过渡的时间为2s。</p>
+<div id="transition-property-duration-style"></div>
+<br>
+
+<p>其实现css如下：</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="hljs-string">"transition-property-duration-style"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">  #transition-property-style div &#123;</span><br><span class="line">    width: <span class="hljs-number">300</span>px;</span><br><span class="line">    height: <span class="hljs-number">200</span>px;</span><br><span class="line">    background-color: teal;</span><br><span class="line">  &#125;</span><br><span class="line">  #transition-property-style:hover &#123;</span><br><span class="line">    background: blue;</span><br><span class="line">    transition-property: background;</span><br><span class="line">    transition-duration: <span class="hljs-number">2</span>s;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="hljs-regexp">/style&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="transition-timing-function"><a href="#transition-timing-function" class="headerlink" title="transition-timing-function"></a>transition-timing-function</h3><hr>
+<p>该属性用于描述属性的中间值。即该两个状态变化的过渡曲线。<br>其取值是一个三次方的贝塞尔曲线的值。<br>贝塞尔曲线(Bézier curve)，又称贝兹曲线或贝济埃曲线，是应用于二维图形应用程序的数学曲线。一般的矢量图形软件通过它来精确画出曲线。</p>
+<div id="transition-property-timming-function-style"></div>
+<br>
+
+<p>其实现css如下：</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="hljs-string">"transition-property-timming-function-style"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">  #transition-property-timming-function-style &#123;</span><br><span class="line">    width: <span class="hljs-number">200</span>px;</span><br><span class="line">    height: <span class="hljs-number">200</span>px;</span><br><span class="line">    margin: auto;</span><br><span class="line">    background-color: #698771;</span><br><span class="line">    transition-property: width;</span><br><span class="line">    transition-duration: <span class="hljs-number">3</span>s;</span><br><span class="line">    trasition-timing-<span class="hljs-function"><span class="hljs-keyword">function</span>: <span class="hljs-title">cubic</span>-<span class="hljs-title">bezier</span>(<span class="hljs-params"><span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span></span>);</span></span><br><span class="line"><span class="hljs-function">  &#125;</span></span><br><span class="line"><span class="hljs-function">  #<span class="hljs-title">transition</span>-<span class="hljs-title">property</span>-<span class="hljs-title">timming</span>-<span class="hljs-title">function</span>-<span class="hljs-title">style</span>:<span class="hljs-title">hover</span> </span>&#123;</span><br><span class="line">    width: <span class="hljs-number">100</span>%;</span><br><span class="line">    transition-property: width;</span><br><span class="line">    transition-duration: <span class="hljs-number">2</span>s;</span><br><span class="line">    transition-timing-<span class="hljs-function"><span class="hljs-keyword">function</span>: <span class="hljs-title">cubic</span>-<span class="hljs-title">bezier</span>(<span class="hljs-params"><span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span></span>);</span></span><br><span class="line"><span class="hljs-function">  &#125;</span></span><br><span class="line"><span class="hljs-function">&lt;/<span class="hljs-title">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>cubic-bezier为一个时序功能的类，该类有四个参数。分别有四个点，对应于三次方的贝塞尔曲线。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/Raloch/img-storage/blob/master/imgs/%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF.jpg?raw=true" alt></p>
+<p>p0和p1为起点和终点，其中p0和p1两个值都是固定的分别为(0,0)和(1， 1)这是两个起始值和终止值，其中传入该参数的为p1和p2的值，（p1和p2的值只能在[0,1]的范围内，否则css将会忽视该属性的值）<br><br></p>
+<h4 id="一些定义的关键字"><a href="#一些定义的关键字" class="headerlink" title="一些定义的关键字"></a>一些定义的关键字</h4><p>linear<br>一个一次函数，经过原点恒定的速率运动。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/Raloch/img-storage/blob/master/imgs/linear.jpg?raw=true" alt></p>
+<p>ease<br>动画开始缓慢，急剧加速，然后逐渐减慢。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/Raloch/img-storage/blob/master/imgs/ease.jpg?raw=true" alt></p>
+<p>ease-in<br>动画开始缓慢，然后逐渐加速直到结束，此时它突然停止。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/Raloch/img-storage/blob/master/imgs/ease-in.webp.jpg?raw=true" alt></p>
+<p>ease-in-out<br>动画开始缓慢，加速，然后减速到最后。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/Raloch/img-storage/blob/master/imgs/ease-in-out.webp.jpg?raw=true" alt></p>
+<p>ease-out<br>动画突然开始，然后逐渐减慢到最后。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/Raloch/img-storage/blob/master/imgs/ease-out.webp.jpg?raw=true" alt></p>
+<p>step-start<br>动画会立即跳转到最终状态，直到结束。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/Raloch/img-storage/blob/master/imgs/step-start.webp.jpg?raw=true" alt></p>
+<p>step-end<br>动画保持其初始状态直到结束，此时它直接跳转到最终状态。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/Raloch/img-storage/blob/master/imgs/step-end.webp.jpg?raw=true" alt></p>
+<h3 id="transition-delay"><a href="#transition-delay" class="headerlink" title="transition-delay"></a>transition-delay</h3><hr>
+<p>规定过渡效果开始作用之前需要等待的时间。</p>
+<div id="transition-property-delay-style"></div>
+<br>
+
+<p>其实现css如下：</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="hljs-string">"transition-property-delay-style"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">  #transition-property-delay-style &#123;</span><br><span class="line">    width: <span class="hljs-number">200</span>px;</span><br><span class="line">    height: <span class="hljs-number">200</span>px;</span><br><span class="line">    margin: auto;</span><br><span class="line">    background-color: #698771;</span><br><span class="line">    transition-property: width;</span><br><span class="line">    transition-duration: <span class="hljs-number">3</span>s;</span><br><span class="line">    trasition-timing-<span class="hljs-function"><span class="hljs-keyword">function</span>: <span class="hljs-title">cubic</span>-<span class="hljs-title">bezier</span>(<span class="hljs-params"><span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span></span>);</span></span><br><span class="line"><span class="hljs-function">    <span class="hljs-title">transition</span>-<span class="hljs-title">delay</span>: 1<span class="hljs-title">s</span>;</span></span><br><span class="line"><span class="hljs-function">  &#125;</span></span><br><span class="line"><span class="hljs-function">  #<span class="hljs-title">transition</span>-<span class="hljs-title">property</span>-<span class="hljs-title">delay</span>-<span class="hljs-title">style</span>:<span class="hljs-title">hover</span> </span>&#123;</span><br><span class="line">    width: <span class="hljs-number">100</span>%;</span><br><span class="line">    transition-property: width;</span><br><span class="line">    transition-duration: <span class="hljs-number">2</span>s;</span><br><span class="line">    transition-timing-<span class="hljs-function"><span class="hljs-keyword">function</span>: <span class="hljs-title">cubic</span>-<span class="hljs-title">bezier</span>(<span class="hljs-params"><span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span></span>);</span></span><br><span class="line"><span class="hljs-function">    <span class="hljs-title">transition</span>-<span class="hljs-title">delay</span>: 1<span class="hljs-title">s</span>;</span></span><br><span class="line"><span class="hljs-function">  &#125;</span></span><br><span class="line"><span class="hljs-function">&lt;/<span class="hljs-title">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="过渡总写"><a href="#过渡总写" class="headerlink" title="过渡总写"></a>过渡总写</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: width <span class="hljs-number">2</span>s cubic-bezier(<span class="hljs-number">0.95</span>, <span class="hljs-number">0.05</span>, <span class="hljs-number">0.795</span>, <span class="hljs-number">0.035</span>) <span class="hljs-number">.5</span>s, background <span class="hljs-number">6</span>s cubic-bezier(<span class="hljs-number">0.95</span>, <span class="hljs-number">0.05</span>, <span class="hljs-number">0.795</span>, <span class="hljs-number">0.035</span>) <span class="hljs-number">5</span>s;</span><br></pre></td></tr></table></figure>
+
+<style>
+  /* property */
+  #transition-property-style {
+    width: 300px;
+    height: 200px;
+    background-color: teal;
+  }
+  #transition-property-style:hover {
+    background: blue;
+    transition-property: background;
+  }
+  /* duration */
+  #transition-property-duration-style {
+    width: 300px;
+    height: 200px;
+    background-color: teal;
+  }
+  #transition-property-duration-style:hover {
+    background: blue;
+    transition-property: background;
+    transition-duration: 2s;
+  }
+  /* function */
+  #transition-property-timming-function-style {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: #698771;
+    transition-property: width;
+    transition-duration: 3s;
+    trasition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  #transition-property-timming-function-style:hover {
+    width: 100%;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  /* delay */
+  #transition-property-delay-style {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: #698771;
+    transition-property: width;
+    transition-duration: 3s;
+    trasition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-delay: 1s;
+  }
+  #transition-property-delay-style:hover {
+    width: 100%;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-delay: 1s;
+  }
+</style>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-11-24T13:57:59.346Z">2019-11-24</time>
                 
                 
@@ -322,7 +530,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        4
                     </p>
                 </div>
             </div>
@@ -427,6 +635,44 @@
         
         <article class="media">
             
+            <a href="/2019/12/24/transition/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt>
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-23T16:14:18.205Z">2019-12-24</time></div>
+                    <a href="/2019/12/24/transition/" class="has-link-black-ter is-size-6"></a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/23/transition/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="CSS3 transition">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-23T15:28:06.175Z">2019-12-23</time></div>
+                    <a href="/2019/12/23/transition/" class="has-link-black-ter is-size-6">CSS3 transition</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/11/24/react-native/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="React Native简介">
@@ -474,6 +720,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/11/">
@@ -535,6 +792,44 @@
         
         <article class="media">
             
+            <a href="/2019/12/24/transition/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt>
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-23T16:14:18.205Z">2019-12-24</time></div>
+                    <a href="/2019/12/24/transition/" class="has-link-black-ter is-size-6"></a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/23/transition/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="CSS3 transition">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-23T15:28:06.175Z">2019-12-23</time></div>
+                    <a href="/2019/12/23/transition/" class="has-link-black-ter is-size-6">CSS3 transition</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/11/24/react-native/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="React Native简介">
@@ -582,6 +877,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/11/">
