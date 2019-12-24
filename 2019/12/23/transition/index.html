@@ -15,7 +15,7 @@
 <meta property="og:description" content="trandition 过渡 transition是一个简写属性，是一个transition-property （定义过渡的属性的名称）以及 transition-duration （定义过渡属性的所需动画的时间）和 transition-timing-function （描述中间值如何计算的） 以及 transition-delay （描述过渡效果开始作用之前需要等待的时间）。 transitio">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-12-23T17:17:13.407Z">
+<meta property="og:updated_time" content="2019-12-24T13:15:42.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3 transition">
 <meta name="twitter:description" content="trandition 过渡 transition是一个简写属性，是一个transition-property （定义过渡的属性的名称）以及 transition-duration （定义过渡属性的所需动画的时间）和 transition-timing-function （描述中间值如何计算的） 以及 transition-delay （描述过渡效果开始作用之前需要等待的时间）。 transitio">
@@ -150,7 +150,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分钟 读完 (大约 1087 个字)
+                    8 分钟 读完 (大约 1172 个字)
                 </span>
                 
                 
@@ -214,7 +214,10 @@
 <p>其实现css如下：</p>
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="hljs-string">"transition-property-delay-style"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">  #transition-property-delay-style &#123;</span><br><span class="line">    width: <span class="hljs-number">200</span>px;</span><br><span class="line">    height: <span class="hljs-number">200</span>px;</span><br><span class="line">    margin: auto;</span><br><span class="line">    background-color: #698771;</span><br><span class="line">    transition-property: width;</span><br><span class="line">    transition-duration: <span class="hljs-number">3</span>s;</span><br><span class="line">    trasition-timing-<span class="hljs-function"><span class="hljs-keyword">function</span>: <span class="hljs-title">cubic</span>-<span class="hljs-title">bezier</span>(<span class="hljs-params"><span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span></span>);</span></span><br><span class="line"><span class="hljs-function">    <span class="hljs-title">transition</span>-<span class="hljs-title">delay</span>: 1<span class="hljs-title">s</span>;</span></span><br><span class="line"><span class="hljs-function">  &#125;</span></span><br><span class="line"><span class="hljs-function">  #<span class="hljs-title">transition</span>-<span class="hljs-title">property</span>-<span class="hljs-title">delay</span>-<span class="hljs-title">style</span>:<span class="hljs-title">hover</span> </span>&#123;</span><br><span class="line">    width: <span class="hljs-number">100</span>%;</span><br><span class="line">    transition-property: width;</span><br><span class="line">    transition-duration: <span class="hljs-number">2</span>s;</span><br><span class="line">    transition-timing-<span class="hljs-function"><span class="hljs-keyword">function</span>: <span class="hljs-title">cubic</span>-<span class="hljs-title">bezier</span>(<span class="hljs-params"><span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span></span>);</span></span><br><span class="line"><span class="hljs-function">    <span class="hljs-title">transition</span>-<span class="hljs-title">delay</span>: 1<span class="hljs-title">s</span>;</span></span><br><span class="line"><span class="hljs-function">  &#125;</span></span><br><span class="line"><span class="hljs-function">&lt;/<span class="hljs-title">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="过渡总写"><a href="#过渡总写" class="headerlink" title="过渡总写"></a>过渡总写</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: width <span class="hljs-number">2</span>s cubic-bezier(<span class="hljs-number">0.95</span>, <span class="hljs-number">0.05</span>, <span class="hljs-number">0.795</span>, <span class="hljs-number">0.035</span>) <span class="hljs-number">.5</span>s, background <span class="hljs-number">6</span>s cubic-bezier(<span class="hljs-number">0.95</span>, <span class="hljs-number">0.05</span>, <span class="hljs-number">0.795</span>, <span class="hljs-number">0.035</span>) <span class="hljs-number">5</span>s;</span><br></pre></td></tr></table></figure>
+<h3 id="过渡总写"><a href="#过渡总写" class="headerlink" title="过渡总写"></a>过渡总写</h3><p>实现一个简单的过渡组合：</p>
+<div id="transition-property-all-style"></div>
+
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="hljs-string">"transition-property-all-style"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">  #transition-property-all-style &#123;</span><br><span class="line">    width: <span class="hljs-number">100</span>px;</span><br><span class="line">    height: <span class="hljs-number">70</span>px;</span><br><span class="line">    background: skyblue;</span><br><span class="line">    border-radius: <span class="hljs-number">50</span>%;</span><br><span class="line">    margin: auto;</span><br><span class="line">    transition: <span class="hljs-number">2</span>s all linear;</span><br><span class="line">  &#125;</span><br><span class="line">  #transition-property-all-style:hover &#123;</span><br><span class="line">    width: <span class="hljs-number">200</span>px;</span><br><span class="line">    height: <span class="hljs-number">140</span>px;</span><br><span class="line">    background: green;</span><br><span class="line">    border-radius: <span class="hljs-number">50</span>%;</span><br><span class="line">    margin: auto;</span><br><span class="line">    transform: rotateY(<span class="hljs-number">720</span>deg);</span><br><span class="line">    transition: <span class="hljs-number">2</span>s all linear;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="hljs-regexp">/style&gt;</span></span><br></pre></td></tr></table></figure>
 
 <style>
   /* property */
@@ -272,6 +275,24 @@
     transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
     transition-delay: 1s;
   }
+  /* 复合写法 */
+  #transition-property-all-style {
+    width: 100px;
+    height: 70px;
+    background: skyblue;
+    border-radius: 50%;
+    margin: auto;
+    transition: 2s all linear;
+  }
+  #transition-property-all-style:hover {
+    width: 200px;
+    height: 140px;
+    background: green;
+    border-radius: 50%;
+    margin: auto;
+    transform: rotateY(720deg);
+    transition: 2s all linear;
+  }
 </style>
         </div>
         
@@ -320,6 +341,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/12/24/animation/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">CSS3 animation</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -379,7 +407,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        4
                     </p>
                 </div>
             </div>
@@ -484,6 +512,25 @@
         
         <article class="media">
             
+            <a href="/2019/12/24/animation/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="CSS3 animation">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-24T13:16:35.530Z">2019-12-24</time></div>
+                    <a href="/2019/12/24/animation/" class="has-link-black-ter is-size-6">CSS3 animation</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/12/23/transition/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="CSS3 transition">
@@ -557,7 +604,7 @@
                     <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -619,6 +666,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/24/animation/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="CSS3 animation">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-24T13:16:35.530Z">2019-12-24</time></div>
+                    <a href="/2019/12/24/animation/" class="has-link-black-ter is-size-6">CSS3 animation</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -695,7 +761,7 @@
                     <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
